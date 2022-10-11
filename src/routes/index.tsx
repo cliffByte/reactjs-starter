@@ -121,3 +121,5 @@
 // export const authRoutes = [auth];
 // export const routes = [dashboard];
 // export const superAdminRoute = [superAdmin];
+
+export {};

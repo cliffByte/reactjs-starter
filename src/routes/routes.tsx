@@ -258,3 +258,5 @@
 //   element: <CreateAdmin />,
 //   icon: <TbUserPlus />,
 // };
+
+export {};

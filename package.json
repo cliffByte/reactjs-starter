@@ -19,11 +19,11 @@
     "@types/react-dom": "^18.0.6",
     "@types/uuid": "^8.3.4",
     "axios": "^1.1.2",
+    "bootstrap": "^5.2.2",
     "class-transformer": "^0.5.1",
     "date-fns": "^2.29.3",
     "formik": "^2.2.9",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
@@ -59,6 +59,7 @@
   },
   "devDependencies": {
     "@types/react-bootstrap": "^0.32.31",
-    "@types/react-modal": "^3.13.1"
+    "@types/react-modal": "^3.13.1",
+    "react-bootstrap": "^2.5.0"
   }
 }

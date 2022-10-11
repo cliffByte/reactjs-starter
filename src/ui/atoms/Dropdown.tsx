@@ -7,8 +7,6 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
-import { IOption } from "../../config/constant/Caste";
-
 interface Iprops {
   name: string;
   label: string;
@@ -22,7 +20,6 @@ const Dropdown = (props: Iprops) => {
   const [choice, setChoice] = useState("");
 
   const handleChange = (event: SelectChangeEvent) => {
-    
     setChoice(event.target.value as string);
   };
 

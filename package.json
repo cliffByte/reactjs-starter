@@ -5,18 +5,25 @@
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.8",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.10.9",
+    "@mui/x-data-grid": "^5.17.6",
+    "@mui/x-date-pickers": "^5.0.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.11.65",
     "@types/react": "^18.0.21",
+    "@types/react-date-range": "^1.4.4",
     "@types/react-dom": "^18.0.6",
+    "@types/uuid": "^8.3.4",
     "axios": "^1.1.2",
     "class-transformer": "^0.5.1",
+    "date-fns": "^2.29.3",
     "formik": "^2.2.9",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router-dom": "^6.4.2",
@@ -49,5 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-bootstrap": "^0.32.31",
+    "@types/react-modal": "^3.13.1"
   }
 }

@@ -4,7 +4,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export const SidebarContext = createContext<any>(null);
+export const SidebarContext = createContext<any>(false);
 
 const SidebarProvider = ({ children }: Props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(true);

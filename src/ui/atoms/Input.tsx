@@ -1,7 +1,5 @@
 import { ReactNode, useState, FC, InputHTMLAttributes } from "react";
-
 import TextField from "@mui/material/TextField";
-
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import { InputAdornment } from "@mui/material";
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -13,11 +11,15 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name?: string;
   onChange?: any;
   value?: string;
+  type?: string;
   placeholder?: string;
   multiline?: boolean;
+  min?: number;
 }
 const Input: FC<InputProps> = ({
+  type,
   variant,
+  icon,
   label,
   name,
   onChange,
@@ -25,6 +27,7 @@ const Input: FC<InputProps> = ({
   error,
   placeholder,
   multiline,
+  min,
 }) => {
   const [showPassword, setShowPassword] = useState(false);
   // function to toggle between password and text
@@ -58,7 +61,8 @@ const Input: FC<InputProps> = ({
         <div>
           <TextField
             sx={{}}
-            type="text"
+            disabled={type === "disabled" ? true : false}
+            type={type === "number" ? "number" : "text"}
             label={label}
             size="small"
             name={name}
@@ -67,6 +71,14 @@ const Input: FC<InputProps> = ({
             error={error}
             placeholder={placeholder}
             multiline={multiline}
+            InputProps={{
+              startAdornment: icon ? (
+                <InputAdornment position="start">{icon}</InputAdornment>
+              ) : undefined,
+              inputProps: {
+                min: min,
+              },
+            }}
           />
         </div>
       )}

@@ -11,15 +11,8 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/addon-jest",
     "@storybook/addon-controls",
-    {
-      name: "@storybook/addon-styling",
-      options: {
-        sass: {
-          // Require your Sass preprocessor here
-          implementation: require("sass"),
-        },
-      },
-    },
+    // The addon below will cause issue since it has not been made compatible with Storybook 7 yet.
+    "@chakra-ui/storybook-addon",
   ],
   framework: {
     name: "@storybook/react-vite",

@@ -2,19 +2,17 @@ import "./assets/sass/main.scss";
 // bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
 // scss file import
-import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // auth for protected rotue
-import RequireAuth from "./auth/RequireAuth";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 // * @ 404 page
 import PageNotFound from "./ui/pages/PageNotFound";
 
 import { sidebarRoutes } from "./routes/routes";
 // import { help, setting } from "./routes/routes";
-import useAuth from "./hooks/useAuth";
 
 const App = () => {
   // const { user } = useAuth();

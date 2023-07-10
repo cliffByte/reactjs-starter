@@ -1,0 +1,38 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 1.5em;
+  padding: 0 1em 1em;
+  will-change: filter;
+  transition: filter 300ms;
+  filter: drop-shadow(0 0 2em #888);
+}
+.logo.react {
+  height: 2.5em;
+  padding: 1em;
+  animation: logo-spin 5s infinite;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+.branch {
+  text-decoration: underline;
+  color: rgb(7, 7, 7);
+  text-decoration-color: #783592;
+  text-decoration-style: wavy;
+}

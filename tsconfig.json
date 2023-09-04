@@ -24,7 +24,21 @@
     "composite": true,
     "types": ["vite/client"],
     "paths": {
-      "@/*": ["/*"]
+      "@ui/*": ["ui/*"],
+      "@assets/*": ["assets/*"],
+      "@regex/*": ["regex/*"],
+      "@graphql/*": ["graphql/*"],
+      "@api/*": ["api/*"],
+      "@type/*": ["types/*"],
+      "@models/*": ["models/*"],
+      "@utils/*": ["utils/*"],
+      "@config/*": ["config/*"],
+      "@data/*": ["data/*"],
+      "@functions/*": ["functions/*"],
+      "@contexts/*": ["contexts/*"],
+      "@hooks/*": ["hooks/*"],
+      "@interface/*": ["interface/*"],
+      "@modals/*": ["modals/*"]
     }
   },
   "exclude": ["node_modules"],

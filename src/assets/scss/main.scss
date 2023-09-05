@@ -1,0 +1,189 @@
+@import './font';
+@import './colors';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // * for make non draggable
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-family: 'helveticaregular';
+  font-size: 15px;
+}
+
+img {
+  object-fit: cover !important;
+}
+
+// * for scroll bar
+::selection {
+  color: $primary-color;
+  background: white;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+.table-search {
+  input {
+    &::placeholder {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+a {
+  text-decoration: none !important;
+}
+
+input[type='text'],
+textarea {
+  &:invalid {
+    border: none;
+    outline: 1px solid red !important;
+  }
+}
+textarea {
+  border: 1px solid $primary-color !important;
+  border-radius: 2px;
+  &:focus {
+    box-shadow: 0px 0px 1px 0px $primary-color !important;
+  }
+}
+input[type='checkbox'] {
+  margin-top: 6px !important;
+  width: 12px !important;
+  height: 12px !important;
+  padding: 0 !important;
+  border-radius: 0.1rem !important;
+}
+
+@media print {
+  th,
+  td {
+    border: 1px solid black;
+    padding: 0.5em;
+  }
+  th:last-child {
+    display: none;
+  }
+  td:last-child {
+    display: none;
+  }
+}
+
+.css-xf2eml[aria-invalid='true'],
+.css-xf2eml[data-invalid] {
+  border-color: none !important;
+  box-shadow: 0 0 0 0px gray !important;
+  outline: none !important;
+  border: 1px solid red !important;
+}
+.chakra-textarea[aria-invalid='true'],
+.chakra-textarea[data-invalid] {
+  border-color: none !important;
+  box-shadow: 0 0 0 0px gray !important;
+  outline: none !important;
+  border: 1px solid red !important;
+}
+.css-1frn0th[aria-invalid='true'],
+.css-1frn0th[data-invalid] {
+  border-color: none !important;
+  box-shadow: 0 0 0 0px gray !important;
+  outline: none !important;
+  border: 1px solid red !important;
+}
+
+// hide tex editor branding
+.tox-statusbar__branding {
+  svg {
+    display: none;
+  }
+}
+
+table {
+  width: 100%;
+  border: 1px solid rgb(236, 236, 236);
+  thead {
+    tr {
+      background-color: rgb(236, 236, 236);
+      th {
+        font-size: 13px;
+        border: 1px solid gainsboro;
+        font-weight: 600;
+        color: rgb(37, 37, 37);
+        padding: 0.2rem 0.5rem;
+        text-align: left;
+        padding-top: 0.5rem;
+        text-transform: capitalize;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        border: 1px solid gainsboro;
+        font-size: 13px;
+        padding: 0.5rem 0.5rem;
+        padding-top: 0.5rem;
+      }
+    }
+  }
+}
+
+.table {
+  table {
+    thead {
+      tr {
+        background: #1c4c70 !important;
+      }
+    }
+  }
+}
+
+label {
+  text-transform: capitalize;
+}
+@media print {
+  #consumerCommittee {
+    overflow: visible;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+#withdrawalFund {
+  thead {
+    tr {
+      text-align: center;
+      th {
+        text-align: center;
+      }
+    }
+  }
+  tbody {
+    tr {
+      text-align: center;
+      td {
+        text-align: center;
+      }
+    }
+  }
+}

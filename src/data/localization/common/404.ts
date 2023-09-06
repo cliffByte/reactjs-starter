@@ -1,6 +1,6 @@
 import { LabelType } from '@type/global.types'
 
-const PAGE_NOT_FOUND_LABELS: LabelType = {
+export const pageNotFoundLabel: LabelType = {
   opps: {
     en: 'Opps!',
     ne: 'ओह!',
@@ -18,4 +18,3 @@ const PAGE_NOT_FOUND_LABELS: LabelType = {
     ne: 'फिर्ता जानुहोस्',
   },
 }
-export default PAGE_NOT_FOUND_LABELS

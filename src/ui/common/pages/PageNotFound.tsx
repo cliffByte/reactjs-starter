@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from '@chakra-ui/react'
-import labels from '@data/localization/404'
+import { pageNotFoundLabel } from '@data/localization/common/404'
 import useLang from '@hooks/useLang'
 import { IoArrowBack } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
@@ -22,10 +22,10 @@ const PageNotFound = () => {
         </Text>
 
         <Flex alignItems={'center'} justifyContent='center'>
-          <Text fontSize={'14px'}>{labels?.opps?.[lang]} &nbsp; </Text>
-          <Text fontSize={'20px'}>{labels?.pageNotFound?.[lang]}</Text>
+          <Text fontSize={'14px'}>{pageNotFoundLabel?.opps?.[lang]} &nbsp; </Text>
+          <Text fontSize={'20px'}>{pageNotFoundLabel?.pageNotFound?.[lang]}</Text>
         </Flex>
-        <Text textAlign={'center'}>{labels?.pageNotFoundDescription?.[lang]}</Text>
+        <Text textAlign={'center'}>{pageNotFoundLabel?.pageNotFoundDescription?.[lang]}</Text>
         <Flex alignItems={'center'} justifyContent='center'>
           <Button
             mt='5'
@@ -40,7 +40,7 @@ const PageNotFound = () => {
               },
             }}
           >
-            <IoArrowBack /> &nbsp; {labels?.goBack?.[lang]}
+            <IoArrowBack /> &nbsp; {pageNotFoundLabel?.goBack?.[lang]}
           </Button>
         </Flex>
       </Box>

@@ -1,13 +1,21 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Flex } from '@chakra-ui/react'
 import { Outlet } from 'react-router-dom'
 import Navbar from '@ui/user/organisms/Navbar'
+import Footer from '@ui/user/organisms/Footer'
 
 const LandingPageTemplate = () => {
   return (
-    <Box>
-      <Navbar />
-      <Outlet />
-    </Box>
+    <Flex minH={'100vh'} direction={'column'} justifyContent={'space-between'}>
+      <Box>
+        <Box position={'sticky'} top='0'>
+          <Navbar />
+        </Box>
+        <Box py='2'>
+          <Outlet />
+        </Box>
+      </Box>
+      <Footer />
+    </Flex>
   )
 }
 

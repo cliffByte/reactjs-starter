@@ -11,7 +11,7 @@ export const userLabel: LabelType = {
   },
   contactUs: {
     en: 'Contact Us',
-    ne: 'सम्पर्क गर्नुहोस्',
+    ne: 'सम्पर्क',
   },
   faq: {
     en: 'FAQ',
@@ -27,7 +27,7 @@ export const userLabel: LabelType = {
   },
   download: {
     en: 'Download',
-    ne: 'डाउनलोड गर्नुहोस्',
+    ne: 'डाउनलोड',
   },
   help: {
     en: 'Help',

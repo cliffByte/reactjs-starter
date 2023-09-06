@@ -1,5 +1,4 @@
 // Docs: https://eslint.org/docs/user-guide/configuring
-
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -23,7 +22,5 @@ module.exports = {
   },
   plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    '@typescript-eslint/no-non-null-assertion': 'off',
   },
 }

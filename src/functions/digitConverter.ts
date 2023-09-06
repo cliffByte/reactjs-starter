@@ -1,6 +1,6 @@
-type Label = Record<string, Record<string, string>>
+import { Language, type LabelType } from '@type/global.types'
 
-const labels: Label = {
+const labels: LabelType = {
   0: {
     en: '0',
     ne: '०',
@@ -77,7 +77,7 @@ export function digitConverter(number: number): Record<string, string> | null {
   return generatedLabels
 }
 
-export function convertToDevanagari(text: string, lang: any): string {
+export function convertToDevanagari(text: string, lang: Language): string {
   const yearString = text?.toString()
   let devanagariYear = ''
 

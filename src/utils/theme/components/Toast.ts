@@ -1,7 +1,6 @@
 import { defineStyleConfig } from '@chakra-ui/react'
-import type { StyleFunctionProps } from '@chakra-ui/styled-system'
 
-const primary = (props: StyleFunctionProps) => ({
+const primary = () => ({
   bg: 'red',
 })
 

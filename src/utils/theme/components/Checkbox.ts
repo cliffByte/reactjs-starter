@@ -1,7 +1,8 @@
 import { checkboxAnatomy } from '@chakra-ui/anatomy'
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
-import { Colors } from './../../Colors'
+import { Colors } from '@utils/Colors'
 
+// eslint-disable-next-line @typescript-eslint/unbound-method
 const { definePartsStyle, defineMultiStyleConfig } = createMultiStyleConfigHelpers(checkboxAnatomy.keys)
 
 const baseStyle = definePartsStyle({

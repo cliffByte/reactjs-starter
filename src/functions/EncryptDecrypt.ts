@@ -1,18 +1,15 @@
-const secretKey = import.meta.env.VITE_APP_CRYPTO_KEY
+const secretKey: string = import.meta.env.VITE_APP_CRYPTO_KEY as string
 
 /**
  * Encrypt a plain text using the given key collection and private key
- *
  * @param {Object} plainText - The object to be encrypted
- * @param {string} privateKey - A private key to be used for encryption
- *
- * @return {string|null} The encrypted string or null if encryption fails
+ * @return {string | null} The encrypted string or null if encryption fails
  */
 
-const encrypt = (plainText: any) => {
+const encrypt = (plainText: string): string | null => {
   try {
     const privateKey = secretKey
-    const keyCollection: any = customKeyCollection
+    const keyCollection: { [key: string]: string } = customKeyCollection
     const string = JSON.stringify(plainText)
     const encodedString = encodeURIComponent(string) // Encode the string to handle non-ASCII characters
     const asciiValue = [...encodedString].map((char) => char.charCodeAt(0))
@@ -29,24 +26,20 @@ const encrypt = (plainText: any) => {
 
 /**
  * Decrypt an encrypted string using the given key collection and private key
- *
  * @param {string} encrypted - The encrypted string to be decrypted
- * @param {string} privateKey - A private key used for decryption
- *
- * @return {Object|null} The decrypted object or null if decryption fails
+ * @return {Object | null} The decrypted object or null if decryption fails
  */
-
-const decrypt = (encrypted: any) => {
+const decrypt = (encrypted: string): object | null => {
   try {
     const privateKey = secretKey
-    const keyCollection: any = customKeyCollection
+    const keyCollection: { [key: string]: string } = customKeyCollection
     const privateKeyBase64 = btoa(privateKey)
     const base64 = encrypted.replace(privateKeyBase64, '')
     const replaceString = atob(base64)
-    const plainString = [...replaceString].map((char) => keyCollection[char] || char).join('')
+    const plainString = [...replaceString].map((char) => keyCollection[char] ?? char).join('')
     const asciiValueWithLength = [...plainString].map((char) => char.charCodeAt(0))
     const string = asciiValueWithLength.map((value) => String.fromCharCode(value)).join('')
-    return JSON.parse(decodeURIComponent(string)) // Decode the string to handle non-ASCII characters
+    return JSON.parse(decodeURIComponent(string)) as object // Decode the string to handle non-ASCII characters
   } catch (err) {
     return null
   }

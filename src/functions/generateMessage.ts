@@ -1,11 +1,17 @@
+import { Language } from '@type/global.types'
+
 interface IType {
   add: 'add'
   delete: 'delete'
   list: 'list'
   manage: 'manage'
 }
-
-const messages: any = {
+type MessagesType = {
+  [lang: string]: {
+    [type: string]: (message: string) => string
+  }
+}
+const messages: MessagesType = {
   en: {
     add: (message: string) => `Add ${message}`,
     delete: (message: string) => `Delete ${message}`,
@@ -20,7 +26,7 @@ const messages: any = {
   },
 }
 
-export const getMessage = (message: string, type: keyof IType, lang: any) => {
+export const getMessage = (message: string, type: keyof IType, lang: Language) => {
   return messages[lang][type](message)
 }
 
@@ -29,8 +35,6 @@ interface IPlaceholderType {
   dropDown: 'dropDown'
   count: 'count'
 }
-
-type Language = 'en' | 'ne'
 
 type PlaceholderType = keyof IPlaceholderType
 

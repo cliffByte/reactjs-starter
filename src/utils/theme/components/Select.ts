@@ -3,7 +3,7 @@
  */
 
 import { defineStyleConfig } from '@chakra-ui/react'
-import { Colors } from '../../Colors'
+import { Colors } from '@utils/Colors'
 
 const selectTheme = defineStyleConfig({
   baseStyle: {

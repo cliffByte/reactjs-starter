@@ -5,84 +5,18 @@ export enum Role {
   WARD_ADMIN = 'WARD_ADMIN',
   MUNICIPALITY_ADMIN = 'MUNICIPALITY_ADMIN',
 }
+export type LabelType = Record<string, Record<string, string>>
 
-export enum PlanAgreementStatus {
-  DRAFT = 'DRAFT',
-  NEW = 'NEW',
-  ACCEPTED = 'ACCEPTED',
-  NONE = 'NONE',
-}
-export enum StatusOfPlan {
-  APPROVED = 'APPROVED',
-  PENDING = 'PENDING',
-  COMPLETED = 'COMPLETED',
-  NEW = 'NEW',
-}
+export type AuthType = {
+  user: string
+  setUser: React.Dispatch<React.SetStateAction<string>>
+  rememberMe: string
+  setRememberMe: React.Dispatch<React.SetStateAction<string>>
+} | null
 
-export enum MediaType {
-  CITIZENSHIP_FRONT = 'CITIZENSHIP_FRONT',
-  CITIZENSHIP_BACK = 'CITIZENSHIP_BACK',
-  CONTRACT = 'CONTRACT',
-  CHECK_BOOK = 'CHECK_BOOK',
-  RESOURCES = 'RESOURCES',
+export type LanguageType = {
+  lang: string
+  setLang: React.Dispatch<React.SetStateAction<string>>
+} | null
 
-  // for contractor agreement
-  CONTRACTOR_AGREEMENT = 'CONTRACTOR_AGREEMENT',
-  CONTRACTOR_MANDATE = 'CONTRACTOR_MANDATE',
-  CONTRACTOR_PERFORMANCE_BOND = 'CONTRACTOR_PERFORMANCE_BOND',
-
-  // consumer committee
-  CONSUMER_COMMITTEE = 'CONSUMER_COMMITTEE',
-  CONSUMER_COMMITTEE_BANK = 'CONSUMER_COMMITTEE_BANK',
-  CONSUMER_COMMITTEE_FORMATION = 'CONSUMER_COMMITTEE_FORMATION',
-  CONSUMER_COMMITTEE_MEETING = 'CONSUMER_COMMITTEE_MEETING',
-
-  // progress report
-  PROGRESS_REPORT_PARTICIPANT_LIST = 'PROGRESS_REPORT_PARTICIPANT_LIST',
-
-  // withdrawal fund
-  WITHDRAWAL_FUND = 'WITHDRAWAL_FUND',
-
-  // excel file of plan
-  PLAN_EXCEL = 'PLAN_EXCEL',
-}
-
-export enum TypeOfInstallment {
-  ADVANCE_INSTALLMENT = 'ADVANCE_INSTALLMENT',
-  FIRST_INSTALLMENT = 'FIRST_INSTALLMENT',
-  SECOND_INSTALLMENT = 'SECOND_INSTALLMENT',
-  THIRD_INSTALLMENT = 'THIRD_INSTALLMENT',
-}
-
-export enum PDFType {
-  CONSUMER_REGISTRATION = 'CONSUMER_REGISTRATION',
-  MANDATE = 'MANDATE',
-}
-
-export enum ExpenditureEstimateTitle {
-  CURRENT = 'CURRENT',
-  CAPITAL = 'CAPITAL',
-  EXPENDITURE = 'EXPENDITURE',
-}
-
-export enum InspectionPost {
-  ENGINEER = 'ENGINEER',
-  JR_ENGINEER = 'JR_ENGINEER',
-  SUPERVISOR = 'SUPERVISOR',
-}
-
-export enum Designation {
-  CHAIRMAN = 'CHAIRMAN',
-  SECRETARY = 'SECRETARY',
-  TREASURER = 'TREASURER',
-  VICE_SECRETARY = 'VICE_SECRETARY',
-  MEMBERS = 'MEMBERS',
-}
-export enum HandoverTo {
-  CONSUMER_COMMITTEE = 'CONSUMER_COMMITTEE',
-  OTHERS = 'OTHERS',
-}
-export enum EvidenceType {
-  CONSUMER_COMMITTEE = 'CONSUMER_COMMITTEE',
-  MUNICIPALITY = 'MUNICIPALITY',
-}
+export type Language = 'en' | 'ne'

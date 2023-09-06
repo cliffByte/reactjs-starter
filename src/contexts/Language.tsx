@@ -1,9 +1,10 @@
+import { type LanguageType } from '@type/global.types'
 import { createContext, useEffect, useState } from 'react'
 
 interface Props {
   children: React.ReactNode
 }
-export const LanguageContext = createContext<any>(null)
+export const LanguageContext = createContext<LanguageType>(null)
 
 const LanguageProvider = ({ children }: Props) => {
   const [language, setLanguage] = useState(localStorage.getItem('planning__lang') ?? 'ne')

@@ -1,6 +1,6 @@
-type Label = Record<string, Record<string, string>>
+import { LabelType } from '@type/global.types'
 
-const PAGE_NOT_FOUND_LABELS: Label = {
+const PAGE_NOT_FOUND_LABELS: LabelType = {
   opps: {
     en: 'Opps!',
     ne: 'ओह!',

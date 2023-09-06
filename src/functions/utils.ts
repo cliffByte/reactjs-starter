@@ -1,4 +1,4 @@
-export const handleDigitKeyPress = (event: { keyCode: any; which: any; preventDefault: () => void }) => {
+export const handleDigitKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
   const keyCode = event.keyCode || event.which
   const keyValue = String.fromCharCode(keyCode)
   const regex = /^[0-9\b]+$/ // allow only numbers and backspace
@@ -7,7 +7,7 @@ export const handleDigitKeyPress = (event: { keyCode: any; which: any; preventDe
   }
 }
 
-export const handleKeyPressForWard = (event: { keyCode: any; which: any; preventDefault: () => void }) => {
+export const handleKeyPressForWard = (event: React.KeyboardEvent<HTMLInputElement>) => {
   const keyCode = event.keyCode || event.which
   const keyValue = String.fromCharCode(keyCode)
   const regex = /^[1-9]$|^1[0-4]$/ // allow only 1 to 14

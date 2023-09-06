@@ -41,14 +41,6 @@ img {
   background: $primary-color;
 }
 
-.table-search {
-  input {
-    &::placeholder {
-      font-size: 0.9rem;
-    }
-  }
-}
-
 a {
   text-decoration: none !important;
 }
@@ -75,20 +67,6 @@ input[type='checkbox'] {
   border-radius: 0.1rem !important;
 }
 
-@media print {
-  th,
-  td {
-    border: 1px solid black;
-    padding: 0.5em;
-  }
-  th:last-child {
-    display: none;
-  }
-  td:last-child {
-    display: none;
-  }
-}
-
 .css-xf2eml[aria-invalid='true'],
 .css-xf2eml[data-invalid] {
   border-color: none !important;
@@ -109,81 +87,4 @@ input[type='checkbox'] {
   box-shadow: 0 0 0 0px gray !important;
   outline: none !important;
   border: 1px solid red !important;
-}
-
-// hide tex editor branding
-.tox-statusbar__branding {
-  svg {
-    display: none;
-  }
-}
-
-table {
-  width: 100%;
-  border: 1px solid rgb(236, 236, 236);
-  thead {
-    tr {
-      background-color: rgb(236, 236, 236);
-      th {
-        font-size: 13px;
-        border: 1px solid gainsboro;
-        font-weight: 600;
-        color: rgb(37, 37, 37);
-        padding: 0.2rem 0.5rem;
-        text-align: left;
-        padding-top: 0.5rem;
-        text-transform: capitalize;
-      }
-    }
-  }
-  tbody {
-    tr {
-      td {
-        border: 1px solid gainsboro;
-        font-size: 13px;
-        padding: 0.5rem 0.5rem;
-        padding-top: 0.5rem;
-      }
-    }
-  }
-}
-
-.table {
-  table {
-    thead {
-      tr {
-        background: #1c4c70 !important;
-      }
-    }
-  }
-}
-
-label {
-  text-transform: capitalize;
-}
-@media print {
-  #consumerCommittee {
-    overflow: visible;
-    width: 100% !important;
-    height: 100% !important;
-  }
-}
-
-#withdrawalFund {
-  thead {
-    tr {
-      text-align: center;
-      th {
-        text-align: center;
-      }
-    }
-  }
-  tbody {
-    tr {
-      text-align: center;
-      td {
-        text-align: center;
-      }
-    }
-  }
 }

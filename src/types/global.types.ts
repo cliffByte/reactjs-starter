@@ -14,9 +14,14 @@ export type AuthType = {
   setRememberMe: React.Dispatch<React.SetStateAction<string>>
 } | null
 
-export type LanguageType = {
-  lang: string
-  setLang: React.Dispatch<React.SetStateAction<string>>
-} | null
+export enum LanguageEnum {
+  en = 'en',
+  ne = 'ne',
+}
 
-export type Language = 'en' | 'ne'
+export type Language = keyof typeof LanguageEnum
+
+export type LanguageType = {
+  lang: LanguageEnum
+  setLang: (lang: LanguageEnum) => void
+}

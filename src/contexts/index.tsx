@@ -1,5 +1,5 @@
-import AuthProvider from './auth'
-import LanguageProvider from './Language'
+import AuthProvider from '@contexts/auth'
+import LanguageProvider from '@contexts/Language'
 interface Props {
   children: React.ReactNode
 }

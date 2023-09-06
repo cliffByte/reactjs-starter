@@ -37,8 +37,7 @@
       "@functions/*": ["functions/*"],
       "@contexts/*": ["contexts/*"],
       "@hooks/*": ["hooks/*"],
-      "@interface/*": ["interface/*"],
-      "@modals/*": ["modals/*"]
+      "@interface/*": ["interface/*"]
     }
   },
   "exclude": ["node_modules"],

@@ -1,19 +1,36 @@
-import { type LanguageType } from '@type/global.types'
-import { createContext, useEffect, useState } from 'react'
+import { LanguageEnum } from '@type/global.types'
+import { createContext, useEffect, useState, ReactNode } from 'react'
 
-interface Props {
-  children: React.ReactNode
+// Define the properties that can be passed to the LanguageProvider component.
+interface LanguageProviderProps {
+  children: ReactNode // The content to be wrapped by the LanguageProvider.
 }
-export const LanguageContext = createContext<LanguageType>(null)
 
-const LanguageProvider = ({ children }: Props) => {
-  const [language, setLanguage] = useState(localStorage.getItem('planning__lang') ?? 'ne')
+// Create a context to manage language settings.
+export const LanguageContext = createContext<{
+  lang: LanguageEnum
+  setLang: (lang: LanguageEnum) => void
+}>({
+  lang: LanguageEnum.en,
+  setLang: () => {
+    return
+  },
+})
 
+// A component to provide and manage language settings.
+const LanguageProvider = ({ children }: LanguageProviderProps) => {
+  // Initialize the language state with a default value from local storage or 'en'.
+  const [language, setLanguage] = useState<LanguageEnum>(
+    (localStorage.getItem('cliff__lang') as LanguageEnum) || LanguageEnum.en
+  )
+
+  // Update local storage whenever the language state changes.
   useEffect(() => {
-    localStorage.setItem('planning__lang', language)
+    localStorage.setItem('cliff__lang', language)
   }, [language])
 
   return (
+    // Provide the language state and setter function to child components.
     <LanguageContext.Provider value={{ lang: language, setLang: setLanguage }}>{children}</LanguageContext.Provider>
   )
 }

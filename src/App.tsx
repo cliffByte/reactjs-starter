@@ -1,24 +1,27 @@
-import reactLogo from './assets/react.svg'
-import cliffByteLogo from './assets/images/logo/logo.svg'
-import './App.css'
+import { Box } from '@chakra-ui/react'
+import { UserPlanningRoute } from './Routes'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
-    <>
-      <div>
-        <img src={reactLogo} className='logo react' alt='React logo' />
-      </div>
-      <div>
-        <a href='https://cliffbyte.com' target='_blank'>
-          <img src={cliffByteLogo} className='logo' alt='Vite logo' />
-        </a>
-      </div>
-
-      <p className='read-the-docs'>
-        NOTE : Please look at the <code className='branch'> graphql </code> branch and the{' '}
-        <code className='branch'>rest-api</code> branch for the suitable usage.
-      </p>
-    </>
+    <Box>
+      <Routes>
+        {/* user -- landing page route */}
+        {UserPlanningRoute &&
+          UserPlanningRoute?.length > 0 &&
+          UserPlanningRoute.map((route, index) => {
+            return (
+              <Route path={route?.path} element={route?.element} key={index}>
+                {route?.children &&
+                  route?.children?.length > 0 &&
+                  route?.children.map((child, index) => {
+                    return <Route path={child?.path} element={child?.element} key={index} />
+                  })}
+              </Route>
+            )
+          })}
+      </Routes>
+    </Box>
   )
 }
 

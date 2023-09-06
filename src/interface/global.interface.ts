@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface ISimpleTable {
   title: string
   description: string
@@ -26,4 +28,10 @@ export interface IChart {
   ne: string
   value: string
   data: number
+}
+
+export interface IRoute {
+  path: string
+  element: ReactNode
+  children?: IRoute[]
 }

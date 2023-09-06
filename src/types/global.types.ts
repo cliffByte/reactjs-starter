@@ -25,3 +25,11 @@ export type LanguageType = {
   lang: LanguageEnum
   setLang: (lang: LanguageEnum) => void
 }
+
+export type AuthValues = {
+  email: string
+  password: string
+  rememberMe?: boolean
+}
+
+export type FormErrors = Record<string, string>

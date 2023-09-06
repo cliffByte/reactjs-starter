@@ -29,6 +29,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.15.0",
+    "react-slick": "^0.29.0",
     "sass": "^1.66.1",
     "vite-tsconfig-paths": "^4.2.0",
     "yup": "^1.2.0"
@@ -36,6 +37,7 @@
   "devDependencies": {
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
+    "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "@vitejs/plugin-react": "^4.0.1",

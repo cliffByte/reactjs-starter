@@ -10,7 +10,7 @@ const LandingPageTemplate = () => {
         <Box position={'sticky'} top='0'>
           <Navbar />
         </Box>
-        <Box py='2'>
+        <Box>
           <Outlet />
         </Box>
       </Box>

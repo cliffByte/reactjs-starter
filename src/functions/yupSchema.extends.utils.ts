@@ -1,4 +1,4 @@
-import { type LabelType } from '@type/global.types'
+import { LanguageEnum, type LabelType } from '@type/global.types'
 import * as Yup from 'yup'
 
 // Helper function to create a Yup schema for a number field
@@ -13,3 +13,6 @@ export function createNumberOptionalSchema(): Yup.NumberSchema<number | null | u
     .optional()
     .transform((value) => (Number.isNaN(value) ? null : value) as number)
 }
+
+export const getMultiLanguageMessage = (lang: LanguageEnum, messages: Record<LanguageEnum, string>) =>
+  messages[lang] || 'Invalid input'

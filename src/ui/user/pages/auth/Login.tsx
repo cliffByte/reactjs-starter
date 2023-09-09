@@ -41,7 +41,7 @@ const Login = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<AuthValues>({
-    resolver: yupResolver(loginSchema),
+    resolver: yupResolver(loginSchema(lang)),
     defaultValues: {
       email: '',
       password: '',
@@ -70,6 +70,7 @@ const Login = () => {
       })
     }
   }
+  console.log('err', errors)
 
   return (
     <Box>
@@ -97,7 +98,7 @@ const Login = () => {
                 placeholder={generatePlaceholder(authLabel?.emailOrMobileNumber[lang], lang)}
               />
             </InputGroup>
-            <FormErrorMessage>{errors?.email?.message?.[lang]}</FormErrorMessage>
+            <FormErrorMessage>{errors?.email?.message}</FormErrorMessage>
           </FormControl>
           <FormControl pt='2' isInvalid={errors.password != null}>
             <FormLabel>{authLabel?.password[lang]} </FormLabel>
@@ -115,7 +116,7 @@ const Login = () => {
                 {show ? <BiShow /> : <BiHide />}
               </InputRightElement>
             </InputGroup>
-            <FormErrorMessage>{errors?.password?.message?.[lang]}</FormErrorMessage>
+            <FormErrorMessage>{errors?.password?.message}</FormErrorMessage>
           </FormControl>
           <Stack spacing={6}>
             <Stack direction={{ base: 'column', sm: 'row' }} align={'start'} justify={'space-between'}>

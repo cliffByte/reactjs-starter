@@ -32,4 +32,15 @@ export type AuthValues = {
   rememberMe?: boolean
 }
 
+export type SignUpValues = {
+  firstName: string
+  middleName?: string
+  lastName: string
+  email: string
+  phoneNumber: string
+  password: string
+  confirmPassword: string
+  termsAndCondition: boolean
+}
+
 export type FormErrors = Record<string, string>

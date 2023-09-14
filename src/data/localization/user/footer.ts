@@ -58,4 +58,8 @@ export const footerLabel: LabelType = {
     en: 'Download',
     ne: 'डाउनलोड',
   },
+  adminLogin: {
+    en: 'Admin Login',
+    ne: 'एड्मिन लगइन',
+  },
 }

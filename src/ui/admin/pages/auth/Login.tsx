@@ -19,16 +19,15 @@ import { generatePlaceholder } from '@functions/generateMessage'
 import useLang from '@hooks/useLang'
 import { loginSchema } from '@config/schema/common/auth.schema'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Colors, DarkTheme, LightTheme } from '@utils/Colors'
+import { DarkTheme, LightTheme } from '@utils/Colors'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { AiOutlineLock } from 'react-icons/ai'
 import { BiHide, BiShow } from 'react-icons/bi'
 import { IoMailUnreadOutline } from 'react-icons/io5'
 import { AuthValues } from '@type/global.types'
-import { Link } from 'react-router-dom'
 
-const Login = () => {
+const AdminLogin = () => {
   const { lang } = useLang()
   const toast = useToast()
   const [show, setShow] = useState<boolean>(false)
@@ -87,7 +86,7 @@ const Login = () => {
             fontWeight='bold'
             color={colorMode === 'light' ? LightTheme.primaryTextColor : DarkTheme.primaryTextColor}
           >
-            {authLabel?.userLogin[lang]}
+            {authLabel?.adminLogin[lang]}
           </Text>
 
           <FormControl isInvalid={errors.email != null}>
@@ -143,14 +142,8 @@ const Login = () => {
           </Stack>
         </Stack>
       </form>
-      <Text pt='4'>
-        {authLabel?.dontHaveAndAccount[lang]}&nbsp;
-        <Link to='/auth/user/sign-up' style={{ color: Colors.primaryColor, fontWeight: '600' }}>
-          {authLabel?.signUp[lang]}
-        </Link>
-      </Text>
     </Box>
   )
 }
 
-export default Login
+export default AdminLogin

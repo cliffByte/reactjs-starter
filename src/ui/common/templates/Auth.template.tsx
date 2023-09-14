@@ -12,18 +12,7 @@ const AuthTemplate = () => {
       alignItems={'center'}
     >
       <AuthCompanyInfo />
-      <Box
-        mt='5'
-        rounded={'lg'}
-        bg={useColorModeValue('white', 'gray.700')}
-        boxShadow={'lg'}
-        p={8}
-        width={{
-          lg: '30vw',
-          md: '50vw',
-          base: '98vw',
-        }}
-      >
+      <Box mt='5' rounded={'lg'} bg={useColorModeValue('white', 'gray.700')} boxShadow={'lg'} p={8}>
         <Outlet />
       </Box>
     </Flex>

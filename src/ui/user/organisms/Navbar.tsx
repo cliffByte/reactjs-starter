@@ -120,7 +120,7 @@ const LoginSignUp = () => {
         as={ReactLink}
         colorScheme='facebook'
         variant={'solid'}
-        to='auth/user'
+        to='auth/user/sign-up'
       >
         {userLabel?.signUp?.[lang]}&nbsp;&nbsp;
         <AiOutlineUserSwitch size={'14px'} />

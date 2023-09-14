@@ -11,6 +11,10 @@ import PageNotFound from '@ui/common/pages/PageNotFound'
 import AuthTemplate from '@ui/common/templates/Auth.template'
 import { IRoute } from '@interface/global.interface'
 
+// Admin
+// admin -- auth
+import AdminLogin from '@ui/admin/pages/auth/Login'
+
 export const UserRoute: IRoute[] = [
   {
     path: '',
@@ -27,6 +31,7 @@ export const UserRoute: IRoute[] = [
     ],
   },
 ]
+
 export const UserAuthRoute: IRoute[] = [
   {
     path: '/auth',
@@ -47,6 +52,27 @@ export const UserAuthRoute: IRoute[] = [
       {
         path: '/auth/user/sign-up',
         element: <UserSignLogin />,
+      },
+      {
+        path: '*',
+        element: <PageNotFound />,
+      },
+    ],
+  },
+]
+
+export const AdminAuthRoute: IRoute[] = [
+  {
+    path: '/auth/admin',
+    element: <AuthTemplate />,
+    children: [
+      {
+        path: '/auth/admin',
+        element: <AdminLogin />,
+      },
+      {
+        path: '/auth/admin/sign-in',
+        element: <AdminLogin />,
       },
       {
         path: '*',

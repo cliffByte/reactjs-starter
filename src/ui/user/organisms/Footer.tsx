@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Center,
   chakra,
   Flex,
@@ -17,8 +18,10 @@ import { officeInfo } from '@config/constant/office'
 import { footerLabel } from '@data/localization/user/footer'
 import { convertToDevanagari } from '@functions/digitConverter'
 import useLang from '@hooks/useLang'
+import { Link as ReactLink } from 'react-router-dom'
 import { type ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { AiOutlineUserSwitch } from 'react-icons/ai'
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
   return (
@@ -56,7 +59,11 @@ export default function LargeWithAppLinksAndSocial() {
   const { lang } = useLang()
 
   return (
-    <Box bg={useColorModeValue('gray.50', 'gray.900')} color={useColorModeValue('gray.700', 'gray.200')}>
+    <Box
+      bg={useColorModeValue('gray.50', 'gray.900')}
+      color={useColorModeValue('gray.700', 'gray.200')}
+      position='relative'
+    >
       <Grid
         templateColumns={{
           xl: 'repeat(5, 1fr)',
@@ -101,6 +108,7 @@ export default function LargeWithAppLinksAndSocial() {
           <Link href={'http://www.moha.gov.np/'}>{footerLabel?.homeMinistry?.[lang]} </Link>
           <Link href={'https://www.opmcm.gov.np/'}>{footerLabel?.primeMinisterAndCouncilOfMinisters?.[lang]} </Link>
           <Link href={'https://www.npc.gov.np/np'}>{footerLabel?.nationalPlanningCommission?.[lang]} </Link>
+          <AdminLogin />
         </Stack>
 
         <Stack align={'flex-start'}>
@@ -161,5 +169,24 @@ export default function LargeWithAppLinksAndSocial() {
         </Text>
       </Box>
     </Box>
+  )
+}
+
+const AdminLogin = () => {
+  const { lang } = useLang()
+
+  return (
+    <Button
+      size='sm'
+      fontSize={'sm'}
+      fontWeight={500}
+      as={ReactLink}
+      colorScheme='telegram'
+      variant={'outline'}
+      to='auth/admin'
+    >
+      {footerLabel?.adminLogin?.[lang]}&nbsp;&nbsp;
+      <AiOutlineUserSwitch size={'14px'} />
+    </Button>
   )
 }

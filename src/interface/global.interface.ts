@@ -35,3 +35,18 @@ export interface IRoute {
   element: ReactNode
   children?: IRoute[]
 }
+
+export interface ISidebar {
+  minimize?: boolean
+  title: string
+  link: string
+  icon: ReactNode
+  roleLevel?: string[] | string
+  subMenu?: Array<{
+    title: string
+    link: string
+    icon: ReactNode
+    roleLevel?: string[] | string
+  }>
+  openSubMenu?: boolean
+}

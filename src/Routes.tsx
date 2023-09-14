@@ -14,6 +14,8 @@ import { IRoute } from '@interface/global.interface'
 // Admin
 // admin -- auth
 import AdminLogin from '@ui/admin/pages/auth/Login'
+// admin -- dashboard
+import AdminTemplate from '@ui/admin/templates/Dashboard.template'
 
 export const UserRoute: IRoute[] = [
   {
@@ -74,6 +76,19 @@ export const AdminAuthRoute: IRoute[] = [
         path: '/auth/admin/sign-in',
         element: <AdminLogin />,
       },
+      {
+        path: '*',
+        element: <PageNotFound />,
+      },
+    ],
+  },
+]
+
+export const AdminDashboardRoute: IRoute[] = [
+  {
+    path: '/admin-dashboard',
+    element: <AdminTemplate />,
+    children: [
       {
         path: '*',
         element: <PageNotFound />,

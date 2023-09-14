@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { UserRoute, UserAuthRoute, AdminAuthRoute } from './Routes'
+import { UserRoute, UserAuthRoute, AdminAuthRoute, AdminDashboardRoute } from './Routes'
 import { Route, Routes } from 'react-router-dom'
 import { IRoute } from '@interface/global.interface'
 
@@ -24,6 +24,9 @@ function App() {
 
         {/* Admin auth routes */}
         {AdminAuthRoute && AdminAuthRoute.length > 0 && renderRoutes(AdminAuthRoute)}
+
+        {/* Admin dashboard routes */}
+        {AdminDashboardRoute && AdminDashboardRoute.length > 0 && renderRoutes(AdminDashboardRoute)}
       </Routes>
     </Box>
   )

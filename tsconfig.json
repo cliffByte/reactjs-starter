@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2021",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": [
+      "ES2021",
+      "DOM",
+      "DOM.Iterable"
+    ],
     "module": "ESNext",
     "skipLibCheck": true,
-
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
@@ -13,35 +16,71 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
     "baseUrl": "./src/",
     "composite": true,
-    "types": ["vite/client"],
+    "types": [
+      "vite/client"
+    ],
     "paths": {
-      "@ui/*": ["ui/*"],
-      "@assets/*": ["assets/*"],
-      "@regex/*": ["regex/*"],
-      "@graphql/*": ["graphql/*"],
-      "@api/*": ["api/*"],
-      "@type/*": ["types/*"],
-      "@models/*": ["models/*"],
-      "@utils/*": ["utils/*"],
-      "@config/*": ["config/*"],
-      "@data/*": ["data/*"],
-      "@functions/*": ["functions/*"],
-      "@contexts/*": ["contexts/*"],
-      "@hooks/*": ["hooks/*"],
-      "@interface/*": ["interface/*"]
+      "@ui/*": [
+        "ui/*"
+      ],
+      "@assets/*": [
+        "assets/*"
+      ],
+      "@regex/*": [
+        "regex/*"
+      ],
+      "@graphql/*": [
+        "graphql/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@type/*": [
+        "types/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@config/*": [
+        "config/*"
+      ],
+      "@data/*": [
+        "data/*"
+      ],
+      "@functions/*": [
+        "functions/*"
+      ],
+      "@contexts/*": [
+        "contexts/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@interface/*": [
+        "interface/*"
+      ]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "compileOnSave": true,
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

@@ -12,7 +12,7 @@ export type AuthType = {
   setUser: React.Dispatch<React.SetStateAction<string>>
   rememberMe: string
   setRememberMe: React.Dispatch<React.SetStateAction<string>>
-} | null
+}
 
 export enum LanguageEnum {
   en = 'en',
@@ -44,3 +44,24 @@ export type SignUpValues = {
 }
 
 export type FormErrors = Record<string, string>
+
+export type userAccess = {
+  id: string
+  name: string
+  email: string
+  role: Role | undefined
+  details: {
+    firstName: {
+      en: string
+      ne: string
+    }
+    middleName?: {
+      en: string
+      ne: string
+    }
+    lastName: {
+      en: string
+      ne: string
+    }
+  }
+}

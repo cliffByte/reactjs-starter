@@ -7,7 +7,16 @@ interface AuthProviderProps {
 }
 
 // Create a context to manage authentication-related state.
-export const AuthContext = createContext<AuthType | null>(null)
+export const AuthContext = createContext<AuthType>({
+  user: '',
+  setUser: () => {
+    return
+  },
+  rememberMe: '',
+  setRememberMe: () => {
+    return
+  },
+})
 
 // A component to provide and manage authentication-related state.
 const AuthProvider = ({ children }: AuthProviderProps) => {

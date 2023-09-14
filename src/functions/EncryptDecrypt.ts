@@ -29,7 +29,7 @@ const encrypt = (plainText: string): string | null => {
  * @param {string} encrypted - The encrypted string to be decrypted
  * @return {Object | null} The decrypted object or null if decryption fails
  */
-const decrypt = (encrypted: string): object | null => {
+const decrypt = (encrypted: string) => {
   try {
     const privateKey = secretKey
     const keyCollection: { [key: string]: string } = customKeyCollection
